@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Morning Market</title>
+  	<meta charset="UTF-8">
+
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="slick-master/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="slick-master/slick/slick-theme.css">
+
+	<style>
+		.slider {
+        width: 50%;
+        margin: 100px auto;
+	    }
+
+	    .slick-slide {
+	      margin: 0px 20px;
+	    }
+
+	    .slick-prev:before,
+	    .slick-next:before {
+	      color: green;
+	    }
+
+
+	    .slick-slide {
+	      transition: all ease-in-out .3s;
+	      opacity: .2;
+	    }
+	    
+	    .slick-active {
+	      opacity: 1;
+	    }
+
+	   
+	</style>
+	
+</head>
+<body>
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-md navbar-light bg-light py-4 fixed-top menu">
+		<div class="container">
+			<a href="" class="navbar-brand">Morning Market</a>
+				<div class="collapse navbar-collapse" id="mynav">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+						<li class="nav-item"><a href="items.html" class="nav-link">Items</a></li>
+						<li class="nav-item"><a href="" class="nav-link">About</a></li>
+						<li class="nav-item"><a href="" class="nav-link">Contact</a></li>
+					</ul>
+				</div>
+		</div>
+	</nav>
+
+	<!-- Banner -->
+	<div class="jumbotron jumbotron-fluid mt-90">
+		<div class="container text-center">
+			<h1 class="text-monospace">Product</h1>
+			<p>Home > Product</p>
+				<div class="center slider">
+
+					<div class="text-center">
+						<a href="" class="text-success text-decoration-none wrapper" title="VEGETABLES">
+							<span class="fa-stack fa-2x">
+								<i class="fas fa-circle fa-stack-2x"></i>
+								<i class="fas fa-seedling fa-stack-1x fa-inverse"></i>
+							</span>
+							
+						</a>
+					</div>
+				    <div class="text-center">
+						<a href="" class="text-success text-decoration-none wrapper" title="FRUITS">
+							<span class="fa-stack fa-2x">
+								<i class="fas fa-circle fa-stack-2x"></i>
+								<i class="fas fa-pepper-hot fa-stack-1x fa-inverse"></i>
+							</span>
+							
+						</a>
+					</div>
+					<div class="text-center">
+						<a href="" class="text-success text-decoration-none wrapper" title="READY_MADE">
+							<span class="fa-stack fa-2x">
+								<i class="fas fa-circle fa-stack-2x"></i>
+								<i class="fas fa-drumstick-bite fa-stack-1x fa-inverse"></i>
+							</span>
+							
+						</a>
+					</div>
+					<div class="text-center">
+						<a href="" class="text-success text-decoration-none wrapper" title="OTHERS">
+							<span class="fa-stack fa-2x">
+								<i class="fas fa-circle fa-stack-2x"></i>
+								<i class="fab fa-canadian-maple-leaf fa-stack-1x fa-inverse"></i>
+							</span>
+							
+						</a>
+					</div>
+					<div class="text-center">
+						<a href="" class="text-success text-decoration-none wrapper">
+							<span class="fa-stack fa-2x">
+								<i class="fas fa-circle fa-stack-2x"></i>
+								<i class="fas fa-gift fa-stack-1x fa-inverse"></i>
+							</span>
+							
+						</a>
+					</div>
+					<div class="text-center">
+						<a href="" class="text-success text-decoration-none wrapper">
+							<span class="fa-stack fa-2x">
+								<i class="fas fa-circle fa-stack-2x"></i>
+								<i class="fas fa-ellipsis-h fa-stack-1x fa-inverse"></i>
+							</span>
+							
+						</a>
+					</div>
+		        </div>
+		</div>
+	</div>
+
+
+	<section class="center slider">
+			    
+	</section>
+
+
+
+
+
+<script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="slick-master/slick/slick.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.center').slick({
+			dots: false,
+			slidesToShow: 5,
+			slidesToScroll: 1,
+			touchMove: false,
+			responsive: [
+		    {
+		      breakpoint: 1024,
+		      settings: {
+		        slidesToShow: 3,
+		        slidesToScroll: 3,
+		        infinite: true,
+		        dots: true
+		      }
+		    },
+		    {
+		      breakpoint: 600,
+		      settings: {
+		        slidesToShow: 2,
+		        slidesToScroll: 2
+		      }
+		    },
+		    {
+		      breakpoint: 480,
+		      settings: {
+		        slidesToShow: 1,
+		        slidesToScroll: 1
+		      }
+		    }
+		  ]
+		});
+
+	})
+</script>
+
+</body>
+</html>
