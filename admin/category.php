@@ -1,6 +1,6 @@
 
 <?php 
-include 'include/header.php';
+include ('include/header.php');
 
 ?>
 <!-- Page Heading -->
@@ -59,7 +59,9 @@ include 'include/header.php';
 								</td>
 							
 							<td>
-								 <a href="#" class="btn btn-outline-warning btn-sm">Edit</a> <a href="cat_delete.php?id=<?php echo $item['id'] ?>" class="btn btn-outline-danger btn-sm">Delete</a></td>
+								
+						 <a href="category_edit.php?id=<?php echo $item['id']; ?>" class="btn btn-outline-warning btn-sm">Edit</a>
+						  <a onclick="javaScript: return confirm('Are You Sure You Want To Delete')" href="category_delete.php?id=<?php echo $item['id'] ?>" class="btn btn-outline-danger btn-sm">Delete</a></td>
 
 						</tr>
 					<?php } ?>

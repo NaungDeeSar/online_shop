@@ -18,7 +18,6 @@ $stmt->bindParam('brand_name',$name);
 $stmt->bindParam('brand_photo',$fullpath);
 $stmt->execute();
 
-
 if($stmt->rowCount()){
 	$msg="Successfully";
 	

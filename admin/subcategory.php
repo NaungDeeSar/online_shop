@@ -58,7 +58,12 @@ include 'include/header.php';
 								</td>
 							
 							<td>
-								 <a href="#" class="btn btn-outline-warning btn-sm">Edit</a> <a href="subcat_delete.php?id=<?php echo $cat['id'] ?>" class="btn btn-outline-danger btn-sm">Delete</a></td>
+								 <a href="subcat_edit.php?id=<?php echo $cat['id']; ?>" class="btn btn-outline-warning btn-sm">Edit</a>
+
+
+
+
+								  <a onclick="javaScript: return confirm('Are You Sure You Want To Delete')" href="subcat_delete.php?id=<?php echo $cat['id'] ?>" class="btn btn-outline-danger btn-sm">Delete</a></td>
 
 						</tr>
 					<?php } ?>

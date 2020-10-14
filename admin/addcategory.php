@@ -10,22 +10,27 @@ $photo=$_FILES['logo'];
 $basepath="img/category/";
 $fullpath=$basepath.$photo['name'];
 move_uploaded_file($photo['tmp_name'],$fullpath);
-$sql="INSERT INTO categories (name,logo)
+
+if(empty($name) || empty($photo)){
+	echo "<script> alert('Plz Enter category name!'); </script>";
+
+}else{
+	$sql="INSERT INTO categories (name,logo)
 VALUES(:cat_name,:cat_logo)";
 $stmt = $pdo->prepare($sql);
 
 $stmt->bindParam('cat_name',$name);
 $stmt->bindParam('cat_logo',$fullpath);
 $stmt->execute();
-
-
 if($stmt->rowCount()){
 	$msg="Successfully";
-	
 }else{
 	echo "Error";
 
 }
+
+}
+
 
 }
  ?>

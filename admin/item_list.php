@@ -67,7 +67,8 @@ include 'include/header.php';
 								echo $item['price']."Ks";
 							} ?>
 						</td>
-						<td><a href="item_detail.php?id=<?php echo $item['id']?>" class="btn btn-outline-primary btn-sm">Detail</a> <a href="#" class="btn btn-outline-warning btn-sm">Edit</a>
+						<td><a href="item_detail.php?id=<?php echo $item['id']?>" class="btn btn-outline-primary btn-sm">Detail</a>
+						 <a href="item_edit.php?id=<?php echo $item['id'] ?>" class="btn btn-outline-warning btn-sm">Edit</a>
 							
 							
 							<a onclick="javaScript: return confirm('Are You Sure You Want To Delete')" href="item_delete.php?id=<?php echo $item['id'] ?>" class="btn btn-outline-danger btn-sm" >Delete</a>
