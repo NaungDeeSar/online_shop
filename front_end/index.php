@@ -34,7 +34,7 @@
 				<li class="nav-item"><a href="" class="nav-link">Contact</a></li>	
 			</ul>
 			<ul class="navbar-nav ml-auto">
-				<li class="nav-item"><a href="#" class="nav-link">
+				<li class="nav-item"><a href="../admin/register.php" class="nav-link">
 					<i class="far fa-user"></i> 
 				</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">

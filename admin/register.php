@@ -1,3 +1,8 @@
+<?php 
+session_start();
+if (!isset($_SESSION['loginuser'])) {
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,26 +39,105 @@
               <div class="text-center">
                 <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
               </div>
-              <form class="user" action="reg.php" method="POST" enctype="multipart/form-data">
+              <form class="user" action="signup.php" method="POST" enctype="multipart/form-data">
+                  <div class="form-group">
+                  <input type="file"  name="image">
+                    <?php 
+                  if (isset($_SESSION['img_error_msg'])) {
+                    ?>
+                    <small class="text-danger"><?php echo $_SESSION['img_error_msg']; ?></small>
+                    <?php 
+                  } 
+                  unset($_SESSION['img_error_msg']);
+
+
+                  ?>
+                </div> 
                 
                 <div class="form-group">
-                  <input type="text" class="form-control form-control-user" name="name" placeholder="Enter your name">
+                  <input type="text" class="form-control form-control-user" name="name" placeholder="Enter your name" value="<?php if(isset($_SESSION['old_name'])) echo $_SESSION['old_name']?>">
+                  <?php 
+                  if (isset($_SESSION['name_error_msg'])) {
+                    ?>
+                    <small class="text-danger"><?php echo $_SESSION['name_error_msg']; ?></small>
+                    <?php 
+                  } 
+                  unset($_SESSION['name_error_msg']);
+                   unset($_SESSION['old_name']);
+                  ?>
+
                 </div>
                 <div class="form-group">
-                  <input type="number" class="form-control form-control-user" name="phone" placeholder="Enter your phone">
+                  <input type="number" class="form-control form-control-user" name="phone" placeholder="Enter your phone" value="<?php if(isset($_SESSION['old_phone'])) echo $_SESSION['old_phone']?>">
+                    <?php 
+                     if(isset($_SESSION['phone_error_msg'])){?>
+                      <small class="text-danger"><?php echo $_SESSION['phone_error_msg']; ?></small>
+
+
+                     <?php }
+                     unset($_SESSION['phone_error_msg']);
+                           unset($_SESSION['old_phone']);
+                      ?>
+                </div>
+                
+                 <div class="form-group">
+                  <input type="email" class="form-control form-control-user" name="email" placeholder="Enter your email" value="<?php if(isset($_SESSION['old_email'])) echo $_SESSION['old_email']?>">
+                    <?php 
+                  if (isset($_SESSION['email_error_msg'])) {
+                    ?>
+                    <small class="text-danger"><?php echo $_SESSION['email_error_msg']; ?></small>
+                    <?php 
+                  } 
+                  unset($_SESSION['email_error_msg']);
+                        unset($_SESSION['old_email']);
+
+
+                  ?>
+                </div>
+                 <div class="form-group">
+                  <input type="password" class="form-control form-control-user" name="pwd" placeholder="Enter your password" value="<?php if(isset($_SESSION['old_pwd'])) echo $_SESSION['old_pwd']?>">
+                    <?php 
+                  if (isset($_SESSION['pwd_error_msg'])) {
+                    ?>
+                    <small class="text-danger"><?php echo $_SESSION['pwd_error_msg']; ?></small>
+                    <?php 
+                  } 
+                  unset($_SESSION['pwd_error_msg']);
+                        unset($_SESSION['old_pwd']);
+
+
+                  ?>
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control form-control-user" name="address" placeholder="Enter your Address">
+                  <input type="password" class="form-control form-control-user" name="user_pwd" placeholder="Enter Confirm password" value="<?php if(isset($_SESSION['old_cpwd'])) echo $_SESSION['old_cpwd']?>">
+                    <?php 
+                  if (isset($_SESSION['cpwd_error_msg'])) {
+                    ?>
+                    <small class="text-danger"><?php echo $_SESSION['cpwd_error_msg']; ?></small>
+                    <?php 
+                  } 
+                  unset($_SESSION['cpwd_error_msg']);
+                        unset($_SESSION['old_cpwd']);
+
+
+                  ?>
                 </div>
-                 <div class="form-group">
-                  <input type="email" class="form-control form-control-user" name="email" placeholder="Enter your email">
+               
+                     <div class="form-group">
+                  <textarea class="form-control" placeholder="Address" name="address"><?php if(isset($_SESSION['old_address'])) echo $_SESSION['old_address']?></textarea>
+                  <?php 
+                    if (isset($_SESSION['address_error_msg'])) {
+                  ?>
+                  <small class="text-danger"><?php echo $_SESSION['address_error_msg']; ?></small>
+                <?php 
+                  }
+                  unset($_SESSION['address_error_msg']);
+                  unset($_SESSION['old_address']);
+
+
+                 ?>
                 </div>
-                 <div class="form-group">
-                  <input type="password" class="form-control form-control-user" name="pwd" placeholder="Enter your password">
-                </div>
-                 <div class="form-group">
-                  <input type="file"  name="image">
-                </div>                
+                              
                 <input type="submit" value="Register Account" class="btn btn-primary btn-user btn-block">
               </form>
               <hr>
@@ -84,3 +168,9 @@
 </body>
 
 </html>
+<?php 
+}else{
+    header("location:index.php");
+}
+
+ ?>
