@@ -1,4 +1,8 @@
 <?php 
+
+session_start();
+if (isset($_SESSION['loginuser']) && $_SESSION['loginuser']['role_name']=="admin") {
+
 include 'include/header.php';
 
 include 'db_connect.php';
@@ -28,14 +32,14 @@ if($stmt->rowCount()){
 
 }
  ?>
- 
 
 <!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-	<h1 class="h3 mb-0 text-gray-800">Brands Create</h1>
+	<h2 class="h3 mb-0 text-gray-700" style="font-family: sans-serif;">
+	<a href="index.php"><i class="fas fa-tachometer-alt"></i></a>&nbsp;&nbsp;<i class="fas fa-arrow-right" style="font-size: 20px"></i>&nbsp;&nbsp;Brands added</h2>
 	<a href="brand.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="far fa-hand-point-left"></i> Go back</a>
 </div>
-
+<hr>
 <div class="row">
 	<p class="text-danger"><?php echo $msg; ?></p>
 	<div class="offset-md-2 col-md-8">
@@ -59,5 +63,10 @@ if($stmt->rowCount()){
 </div>
 
 
+<?php include 'include/footer.php';
+}else{
+  header("location:../front_end/index.php");
+}
 
-<?php include 'include/footer.php' ?>
+
+ ?>

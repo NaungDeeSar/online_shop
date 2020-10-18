@@ -8,9 +8,11 @@ include 'include/header.php';
 ?>
 <!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-	<h1 class="h3 mb-0 text-gray-800">Item List</h1>
+	<h2 class="h3 mb-0 text-gray-700" style="font-family: sans-serif;">
+	<a href="index.php"><i class="fas fa-tachometer-alt"></i></a>&nbsp;&nbsp;<i class="fas fa-arrow-right" style="font-size: 20px"></i>&nbsp;&nbsp;Item List</h2>
 	<a href="create_item.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-plus"></i> Add Item</a>
 </div>
+<hr>
 
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
@@ -59,10 +61,10 @@ include 'include/header.php';
 						<td><?php echo $item['codeno']; ?></td>
 						<td>
 							<?php if($item['discount']){
-								echo $item['price']."Ks";
+								echo $item['discount']."Ks";
 
 								?>
-								<del><?php echo $item['discount']."Ks"; ?></del>
+								<del><?php echo $item['price']."Ks"; ?></del>
 
 								
 								<?php
@@ -87,7 +89,7 @@ include 'include/header.php';
 </div>
 <?php include 'include/footer.php';
 }else{
-  header("location:../front_end/index.php");
+  header("location:../index.php");
 }
 
 

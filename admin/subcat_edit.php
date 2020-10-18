@@ -1,4 +1,8 @@
 <?php 
+
+session_start();
+if (isset($_SESSION['loginuser']) && $_SESSION['loginuser']['role_name']=="admin") {
+
 include 'include/header.php';
 
 $id=$_GET['id'];
@@ -66,5 +70,10 @@ $subcats=$stmt->fetch(PDO::FETCH_ASSOC);
 </div>
 
 
+<?php include 'include/footer.php';
+}else{
+  header("location:../front_end/index.php");
+}
 
-<?php include 'include/footer.php' ?>
+
+ ?>

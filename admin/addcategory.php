@@ -1,4 +1,8 @@
 <?php 
+
+session_start();
+if (isset($_SESSION['loginuser']) && $_SESSION['loginuser']['role_name']=="admin") {
+
 include 'include/header.php';
 
 include 'db_connect.php';
@@ -43,7 +47,7 @@ if($stmt->rowCount()){
 </div>
 
 <div class="row">
-	<p class="text-danger"><?php echo $msg; ?></p>
+	
 	<div class="offset-md-2 col-md-8">
 		<form method="POST" action="" enctype="multipart/form-data">
 			<div class="form-group">
@@ -56,8 +60,15 @@ if($stmt->rowCount()){
 			</div>
 			
 
-			<input type="submit" name="category" value="Save" class="btn btn-primary float-right" >
+			<button class="btn btn-primary btn-icon-split" name="category">
+                    <span class="icon text-white-50">
+                      <i class="fas fa-check text-white"></i>
+                    </span>
+                    <span class="text">Save</span>
+                  </button>
 		</form>
+            
+		<p class="text-danger text-center"><?php echo $msg; ?></p>
 
 	</div>
 
@@ -66,4 +77,10 @@ if($stmt->rowCount()){
 
 
 
-<?php include 'include/footer.php' ?>
+<?php include 'include/footer.php';
+}else{
+  header("location:../index.php");
+}
+
+
+ ?>

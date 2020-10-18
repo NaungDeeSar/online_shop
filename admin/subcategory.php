@@ -1,14 +1,20 @@
 
 <?php 
+
+session_start();
+if (isset($_SESSION['loginuser']) && $_SESSION['loginuser']['role_name']=="admin") {
+
 include 'include/header.php';
 
 ?>
+
 <!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-	<h1 class="h3 mb-0 text-gray-800">Subcategory List</h1>
+	<h2 class="h3 mb-0 text-gray-700" style="font-family: sans-serif;">
+	<a href="index.php"><i class="fas fa-tachometer-alt"></i></a>&nbsp;&nbsp;<i class="fas fa-arrow-right" style="font-size: 20px"></i>&nbsp;&nbsp;Subcategory List</h2>
 	<a href="addsubcategory.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-plus"></i> Add subcategory</a>
 </div>
-
+<hr>
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
 	<div class="card-header py-3">
@@ -75,7 +81,10 @@ include 'include/header.php';
 </div>
 
 
+<?php include 'include/footer.php';
+}else{
+  header("location:../front_end/index.php");
+}
 
 
-
-<?php include 'include/footer.php' ?>
+ ?>

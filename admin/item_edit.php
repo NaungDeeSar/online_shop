@@ -1,5 +1,8 @@
 
 <?php 
+session_start();
+if (isset($_SESSION['loginuser']) && $_SESSION['loginuser']['role_name']=="admin") {
+
 include 'include/header.php';
 $id=$_GET['id'];
 
@@ -11,11 +14,16 @@ $item=$stmt->fetch(PDO::FETCH_ASSOC);
 
 
 ?>
+
+
 <!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-	<h1 class="h3 mb-0 text-gray-800">Item Edit</h1>
-	<a href="item_list.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="far fa-hand-point-left"></i> Go back</a>
+	<h2 class="h3 mb-0 text-gray-700" style="font-family: sans-serif;">
+	<a href="index.php"><i class="fas fa-tachometer-alt"></i></a>&nbsp;&nbsp;<i class="fas fa-arrow-right" style="font-size: 20px"></i>&nbsp;&nbsp;Item Edit</h2>
+		<a href="item_list.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="far fa-hand-point-left"></i> Go back</a>
 </div>
+
+<hr>
 
 <div class="row">
 	<div class="offset-md-2 col-md-8">
@@ -30,7 +38,7 @@ $item=$stmt->fetch(PDO::FETCH_ASSOC);
 				<label for="photo"> Item Photo</label><br>
 				<input type="hidden" name="oldphoto" value="<?php echo $item['photo'] ?>">
 				<input type="file" name="photo">
-				<img src="<?php echo $item['photo'] ?>">
+				<img src="<?php echo $item['photo'] ?>" class="img-fluid" width="200px">
 			</div>
 			<div class="form-group">
 
@@ -132,4 +140,11 @@ $item=$stmt->fetch(PDO::FETCH_ASSOC);
 
 
 
-<?php include 'include/footer.php' ?>
+
+<?php include 'include/footer.php';
+}else{
+  header("location:../index.php");
+}
+
+
+ ?>

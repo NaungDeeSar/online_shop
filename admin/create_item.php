@@ -9,9 +9,12 @@ include 'include/header.php';
 ?>
 <!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-	<h1 class="h3 mb-0 text-gray-800">Item Create</h1>
+	<h2 class="h3 mb-0 text-gray-700" style="font-family: sans-serif;">
+	<a href="index.php"><i class="fas fa-tachometer-alt"></i></a>&nbsp;&nbsp;<i class="fas fa-arrow-right" style="font-size: 20px"></i>&nbsp;&nbsp;Create Items</h2>
 	<a href="item_list.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="far fa-hand-point-left"></i> Go back</a>
 </div>
+<hr>
+
 
 <div class="row">
 	<div class="offset-md-2 col-md-8">
@@ -102,7 +105,7 @@ include 'include/header.php';
 
 <?php include 'include/footer.php';
 }else{
-  header("location:../front_end/index.php");
+  header("location:../index.php");
 }
 
 ?>
