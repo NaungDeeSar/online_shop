@@ -21,7 +21,7 @@ $items=$stmt->fetchAll();
                         <a href="index.php">
                         	<i class="fa fa-home" style="font-size: 18px">&nbsp;Home&nbsp;</i></a>
                         	<span><i class="fas fa-chevron-right"></i>
-                        		Products
+                        		All Items
                         	</span>
 
                       

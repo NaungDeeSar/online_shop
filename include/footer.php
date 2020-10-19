@@ -1,20 +1,70 @@
+
+<div class="container">
+	<div class="row ">
+		<div class="col-12 col-md-4 py-2">
+			<div class="row">
+				<div class="col-4">
+					<img src="images/delivery.png">
+				</div>
+					<div class="col-8">
+						<h4 class="text-dark">Door to Door Delivery</h4>
+						<h6 class="text-muted">On-time Delivery</h6>
+					</div>
+			</div>			
+
+		
+		</div>	
+			<div class="col-12 col-md-4 py-2">
+				<div class="row">
+					<div class="col-4">
+						<span class="fa-stack fa-2x bg-light" style="border-radius: 50px;width: 85px; height: 85px">
+
+							<i class="fas fa-headphones-alt fa-stack-1x my-2" style="color: #F7951D;font-size:45px"></i>
+						</span>
+					</div>
+					<div class="col-8">
+						<h4>Customer Service</h4>
+						<p class="text-muted">Hotline: <span class="text-danger">09-97999998</span></p>
+					</div>
+				</div>	
+			
+		</div>
+		<div class="col-12 col-md-4 py-2">
+			<div class="row">
+				<div class="col-4">
+					<img src="images/return.png">
+				</div>
+				<div class="col-8">
+					<h4>Satisfication</h4>
+					<p class="text-muted">3 Day Return</p>
+				</div>	
+			</div>
+			
+		</div>
+	
+		
+	</div>
+</div>
+
 <!-- Footer -->
-<footer class="container-fluid bg-light pt-4 mt-5">
+<footer class="container-fluid bg-light pt-4 mt-5" style="border-top: 2px solid green">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4">
-				<h4 class="text-muted ml-2" style="text-decoration: underline;">Promotion</h4>
-				<nav class="nav my-2">
-					<a class="nav-link btn btn-outline-success ml-1 my-1" href="#">New Arrival</a>
-					<a class="nav-link btn btn-outline-success ml-1 my-1" href="#">Best Seller</a>
-					<a class="nav-link btn btn-outline-success ml-1 my-1" href="#">Lastest Stores</a>
-					<a class="nav-link btn btn-outline-success ml-1 my-1" href="#">Brand Stores</a>
+				<h4 class="text-muted ml-2">Promotion</h4>
+				<nav class="nav my-3">
+					<a class="nav-link btn btn-outline-info ml-1 my-1" href="index.php">New Arrival</a>
+					<a class="nav-link btn btn-outline-warning ml-1 my-1" href="product.php">All Items</a>
 
+					<a class="nav-link btn btn-outline-info ml-1 my-1" href="index.php">Best Seller</a>
+					<a class="nav-link btn btn-outline-warning ml-1 my-1" href="index.php">Lastest Itmes</a>
+					<a class="nav-link btn btn-outline-info ml-1 my-1" href="index.php">Brand Stores</a>
+					
 				</nav>
 
 			</div>
 			<div class="col-md-4">
-				<h4 class="text-muted ml-3" style="text-decoration: underline;">Category</h4>
+				<h4 class="text-muted ml-3">Category</h4>
 				<?php 
 				$sql="SELECT * FROM categories";
 				$stmt=$pdo->prepare($sql);
@@ -24,7 +74,7 @@
 
 
 					?>
-					<a class="dropdown-item text-muted font-weight-bold" href="category.php?id=<?php echo $cat['id']; ?>">
+					<a class="dropdown-item text-muted font-weight-bold my-1" href="category.php?id=<?php echo $cat['id']; ?>">
 						<?php echo $cat['name']; ?></a>
 					<?php } ?>
 
@@ -32,8 +82,8 @@
 
 				</div>
 				<div class="col-md-4">
-					<h4 class="text-muted" style="text-decoration: underline;">Newsletter</h4>
-					<form action="">
+					<h4 class="text-muted">Newsletter</h4>
+					<form action="" class="my-3">
 
 
 						<div class="email-box my-2">
@@ -148,8 +198,6 @@
 		else {
 			$('.menu1').removeClass('header-fixed');
 		}
-
-
 
 
 	});

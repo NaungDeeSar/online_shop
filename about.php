@@ -33,7 +33,7 @@ include "admin/db_connect.php";
             <img src="images/vision.jpg" class="img-fluid">
             <h5 class="text-muted text-center py-3">Vision</h5>
             <p class="text-muted text-justify ml-2 my-3" style="width: 490px;font-size: 18px">
-                ခေတ်မီ စိတ်ချရသော ခိုင်မာသည့် Ecommerce Platform ပီပြင်စွာပေါ် ပေါက်ရေး
+                ခေတ်မီ စိတ်ချရသော ခိုင်မာသည့် Ecommerce Platform ပီပြင်စွာပေါ် ပေါက်ရေး.
             </p>
         </div>
           <div class="col-6 my-3">
