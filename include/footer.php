@@ -51,20 +51,22 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4">
-				<h4 class="text-muted ml-2">Promotion</h4>
-				<nav class="nav my-3">
-					<a class="nav-link btn btn-outline-info ml-1 my-1" href="index.php">New Arrival</a>
-					<a class="nav-link btn btn-outline-warning ml-1 my-1" href="product.php">All Items</a>
+				<h4 class="text-muted ml-2 font-weight-bold" >All Pages</h4>
+				
+					<div class="pages text-danger">
+					<a class="ml-1 my-1" href="index.php"  style="text-decoration: none;color: #999;font-size: 18px;font-weight: 700">Home</a><br>
+					<a class=" ml-1 my-1" href="product.php"  style="text-decoration: none;color: #999;font-size: 18px;font-weight: 700">All Items</a><br>
 
-					<a class="nav-link btn btn-outline-info ml-1 my-1" href="index.php">Best Seller</a>
-					<a class="nav-link btn btn-outline-warning ml-1 my-1" href="index.php">Lastest Itmes</a>
-					<a class="nav-link btn btn-outline-info ml-1 my-1" href="index.php">Brand Stores</a>
+					<a class="ml-1 my-1" href="about.php"  style="text-decoration: none;color: #999;font-size: 18px;font-weight: 700">About</a><br>
+					<a class="ml-1 my-1" href="contact.php"  style="text-decoration: none;color: #999;font-size: 18px;font-weight: 700">Contact</a>
 					
-				</nav>
+					</div>
+					
+				
 
 			</div>
 			<div class="col-md-4">
-				<h4 class="text-muted ml-3">Category</h4>
+				<h4 class="text-muted ml-3 font-weight-bold">Category</h4>
 				<?php 
 				$sql="SELECT * FROM categories";
 				$stmt=$pdo->prepare($sql);
@@ -82,7 +84,7 @@
 
 				</div>
 				<div class="col-md-4">
-					<h4 class="text-muted">Newsletter</h4>
+					<h4 class="text-muted font-weight-bold">Newsletter</h4>
 					<form action="" class="my-3">
 
 

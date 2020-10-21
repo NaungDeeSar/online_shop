@@ -140,7 +140,8 @@ $subcategories=$stmt->fetchAll();
 </div>
 
 
-
+<br>
+<br>
 
 <?php 
 include "include/footer.php";

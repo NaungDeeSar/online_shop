@@ -98,20 +98,9 @@ $items=$stmt->fetchAll();
 	<?php } ?>
 	
 	</div>
-
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
+<br>
+<br>
 
 <?php 
 include "include/footer.php";

@@ -14,6 +14,7 @@ include "admin/db_connect.php";
 	<link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/animate.css">
 	<style type="text/css">
+
 		.search-container input[type=text] {
 			padding: 6px;
 			margin-top: 8px;
@@ -97,8 +98,8 @@ include "admin/db_connect.php";
 			<div class="row">
 				<div class="col-6 col-md-8 ">
 
-					<div class="float-left my-1">
-						<a href="" class="text-white ">
+					<div class="float-left my-2">
+						<a href="" class="text-white">
 							<i class="fas fa-phone">&nbsp;&nbsp;+5925999999</i>
 						</a>&nbsp;&nbsp;
 						<a href="" class="text-white">
@@ -140,7 +141,7 @@ include "admin/db_connect.php";
 
 					<p class="text-muted my-1">
 						<div class="img  header-img10 my-2">
-							<a href="index.php"  class="menu2">Dvgxlxm</a>
+							<a href="index.php"  class="menu2">DS-Shop</a>
 						</div>
 					</p>
 				</div>
@@ -221,7 +222,7 @@ include "admin/db_connect.php";
 		<nav class="navbar navbar-expand-lg  navbar-light py-2 menu">
 			<div class="container">
 						<div class="img  my-2 header-img10">
-							<a href="index.php"  class="menu20">Dvgxlxm</a>
+							<a href="index.php"  class="menu20">DS-Shop</a>
 						</div>
 
 		<button class="navbar-toggler" data-toggle="collapse" data-target="#mynav">

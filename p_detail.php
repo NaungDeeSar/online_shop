@@ -225,7 +225,8 @@ $subcategories=$stmt->fetchAll();
 
 </div>
 <!-- /.container -->
-
+<br>
+<br>
 <?php 
 include "include/footer.php";
 
